@@ -14,10 +14,10 @@ jobs:
         with:
           node-version: lts/*
 
-      - name: npm install, make test-coverage
+      - name: npm install
         run: |
           npm install
-          npm run test
+          npm run test-with-coverage
 
       - name: Coveralls
         uses: coverallsapp/github-action@v2
