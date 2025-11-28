@@ -1,6 +1,6 @@
-import upperFirst from './upperFirst.js'
-import words from './words.js'
-import toString from './toString.js'
+import upperFirst from './upperFirst.js';
+import words from './words.js';
+import toString from './toString.js';
 
 /**
  * Converts `string` to [camel case](https://en.wikipedia.org/wiki/CamelCase).
@@ -21,11 +21,10 @@ import toString from './toString.js'
  * camelCase('__FOO_BAR__')
  * // => 'fooBar'
  */
-const camelCase = (string) => (
+const camelCase = (string) =>
   words(toString(string).replace(/['\u2019]/g, '')).reduce((result, word, index) => {
-    word = word.toLowerCase()
-    return result + (index ? upperFirst(word) : word)
-  }, '')
-)
+    word = word.toLowerCase();
+    return result + (index ? upperFirst(word) : word);
+  }, '');
 
-export default camelCase
+export default camelCase;

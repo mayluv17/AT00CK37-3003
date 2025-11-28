@@ -1,8 +1,8 @@
-import baseAssignValue from './.internal/baseAssignValue.js'
-import reduce from './reduce.js'
+import baseAssignValue from './.internal/baseAssignValue.js';
+import reduce from './reduce.js';
 
 /** Used to check objects for own properties. */
-const hasOwnProperty = Object.prototype.hasOwnProperty
+const hasOwnProperty = Object.prototype.hasOwnProperty;
 
 /**
  * Creates an object composed of keys generated from the results of running
@@ -27,15 +27,19 @@ const hasOwnProperty = Object.prototype.hasOwnProperty
  * // => { 'true': 2, 'false': 1 }
  */
 function countBy(collection, iteratee) {
-  return reduce(collection, (result, value, key) => {
-    key = iteratee(value)
-    if (hasOwnProperty.call(result, key)) {
-      ++result[key]
-    } else {
-      baseAssignValue(result, key, 1)
-    }
-    return result
-  }, {})
+  return reduce(
+    collection,
+    (result, value, key) => {
+      key = iteratee(value);
+      if (hasOwnProperty.call(result, key)) {
+        ++result[key];
+      } else {
+        baseAssignValue(result, key, 1);
+      }
+      return result;
+    },
+    {}
+  );
 }
 
-export default countBy
+export default countBy;

@@ -1,10 +1,10 @@
-import root from './.internal/root.js'
+import root from './.internal/root.js';
 
 /** Built-in value references. */
-const Buffer = root.Buffer
+const Buffer = root.Buffer;
 
 /* Built-in method references for those with the same name as other `lodash` methods. */
-const nativeIsBuffer = Buffer && typeof Buffer.isBuffer === 'function' ? Buffer.isBuffer : undefined
+const nativeIsBuffer = Buffer && typeof Buffer.isBuffer === 'function' ? Buffer.isBuffer : undefined;
 
 /**
  * Checks if `value` is a buffer.
@@ -21,6 +21,6 @@ const nativeIsBuffer = Buffer && typeof Buffer.isBuffer === 'function' ? Buffer.
  * isBuffer(new Uint8Array(2))
  * // => false
  */
-const isBuffer = nativeIsBuffer || (() => false)
+const isBuffer = nativeIsBuffer || (() => false);
 
-export default isBuffer
+export default isBuffer;
