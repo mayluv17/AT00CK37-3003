@@ -23,7 +23,9 @@ const INFINITY = 1 / 0
  * // => '1,2,3'
  */
 function toString(value) {
-  
+  if (value == null) {
+    return ''
+  }
   // Exit early for strings to avoid a performance hit in some environments.
   if (typeof value === 'string') {
     return value

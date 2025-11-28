@@ -30,7 +30,7 @@ function chunk(array, size = 1) {
   const result = new Array(Math.ceil(length / size))
 
   while (index < length) {
-    result[resIndex] = slice(array, index, (index += size))
+    result[resIndex++] = slice(array, index, (index += size))
   }
   return result
 }

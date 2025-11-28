@@ -28,6 +28,7 @@ function asciiWords(string) {
  * // => ['fred', 'barney', '&', 'pebbles']
  */
 function words(string, pattern) {
+  string = string == null ? '' : `${string}`
   if (pattern === undefined) {
     const result = hasUnicodeWord(string) ? unicodeWords(string) : asciiWords(string)
     return result || []

@@ -31,7 +31,10 @@
  * // => true
  */
 function castArray(...args) {
-  const value = args[0]
+  if (!args.length) {
+    return []
+  }
+  const [value] = args
   return Array.isArray(value) ? value : [value]
 }
 
