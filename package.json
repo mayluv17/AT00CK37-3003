@@ -20,12 +20,11 @@
     "nyc": "^17.1.0"
   },
   "nyc": {
+    "all": true,
     "exclude": [
-      "src/.internal/*.js"
-    ],
-    "reporter": [
-      "lcov",
-      "text-summary"
+      "src/.internal/*.js",
+      "src/LICENSE",
+      "test"
     ]
   }
 }
