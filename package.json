@@ -9,7 +9,7 @@
     "test-cov": "nyc npm run mocha",
     "test": "nyc mocha",
     "test-with-coverage": "nyc --reporter=text mocha",
-    "test-coveralls": "nyc npm run mocha"
+    "test-coveralls": "nyc report --reporter=text-lcov | coveralls"
   },
   "author": "",
   "license": "MIT",
